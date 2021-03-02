@@ -1,6 +1,17 @@
 
   from tkinter import *
 
+
+
+gui.geometry("800x600")
+
+gui.configure(bg='blue')
+
+gui.mainloop() 
+
+myFont = font.Font(family='Helvetica')
+button['font'] = myFont
+
 root = Tk()
 root.title("Calculator")
 
@@ -9,6 +20,7 @@ e.grid(row=0, column=0, columnspan=3, padx=10, pady=10)
 
 
 def button_click(number):
+	#e.delete(0, END)
 	current = e.get()
 	e.delete(0, END)
 	e.insert(0, str(current) + str(number))
